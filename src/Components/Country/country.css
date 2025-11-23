@@ -1,0 +1,12 @@
+.country{
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 5px 5px 15px gray;
+    border-radius: 20px;
+    background-color: #f0f8ff;
+}
+
+.country-visited{
+    background-color:beige;
+}
