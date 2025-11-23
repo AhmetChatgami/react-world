@@ -25,7 +25,7 @@ console.log(handleVisitedCountries);
       <button onClick={hadnleVisited}>
         {visited ? "Visited" : "Not Visited"}
       </button>
-      <button onClick={() => handleVisitedFlag(country.flags.png)}>Add Flag</button>
+      <button onClick={() =>{ handleVisitedFlag(country.flags.flags.png)}}>Add Flag</button>
     </div>
   );
 };

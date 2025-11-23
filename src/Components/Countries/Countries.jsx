@@ -4,15 +4,15 @@ import "./Countries.css";
 
 const Countries = ({ countriesPromise }) => {
   const [visitedCountries, setVisitedCountries] = useState([]);
-  const [vistedFlags, setVisitedFlags] = useState([]);
+  const [visitedFlags, setVisitedFlags] = useState([]);
 
   const handleVisitedCountries = (country) => {
-    console.log("Visited Countries", country);
+    // console.log("Visited Countries", country);
     const newVisitedCountries =[...visitedCountries, country];
     setVisitedCountries(newVisitedCountries);
   }
   const handleVisitedFlag = (flag) => {
-    const newVisitedFlags = [...setVisitedFlags, flag];
+    const newVisitedFlags = [...visitedFlags, flag];
     setVisitedFlags(newVisitedFlags);
   }
 
@@ -23,16 +23,16 @@ const Countries = ({ countriesPromise }) => {
     <div>
       <p>Country Data: {countries.length}</p>
       <p>Visited Countries: {visitedCountries.length}</p>
-      <h3>Total Flags Visited: {vistedFlags.length}</h3>
+      <h3>Total Flags Visited: {visitedFlags.length}</h3>
       <ol>
         {
           visitedCountries.map(country => <li>{country.name.common}</li>)
         }
       </ol>
 
-      <div>
+      <div className= "visited-flag">
         {
-          visitedFlags.map(flag=> <img src={flag} alt="visited-flag" />)
+          visitedFlags.map((flag, index)=> <img key={index} src={flag}/>)
         }
       </div>
       <div className="countries">
